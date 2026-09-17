@@ -68,10 +68,6 @@
     box-sizing: border-box;
     transition: all 0.3s ease;
 
-    &:hover:not(:disabled) {
-      background-color: #4a4d5d;
-    }
-
     &--disabled,
     &:disabled {
       background-color: transparent;
@@ -82,6 +78,10 @@
         opacity: 0.3;
         filter: none;
       }
+    }
+
+    &:hover:not(:disabled) {
+      background-color: #4a4d5d;
     }
   }
 
