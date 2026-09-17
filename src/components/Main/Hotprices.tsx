@@ -67,28 +67,6 @@ export const Hotprices: React.FC<Props> = ({ products, className, title }) => {
     });
   };
 
-  const getAssetPath = (path: string) => {
-    if (!path) {
-      return '';
-    }
-
-    if (path.startsWith('http://') || path.startsWith('https://')) {
-      return path;
-    }
-
-    const cleanPath = path.replace(/^[./]+/, '');
-    const publicUrl =
-      process.env.PUBLIC_URL ||
-      (typeof import.meta !== 'undefined' && import.meta.env?.BASE_URL) ||
-      '';
-
-    const normalizedPublicUrl = publicUrl.endsWith('/')
-      ? publicUrl.slice(0, -1)
-      : publicUrl;
-
-    return `${normalizedPublicUrl}/${cleanPath}`;
-  };
-
   return (
     <section className={`products-slider ${className || ''}`}>
       <div className="products-slider__top">
@@ -106,7 +84,7 @@ export const Hotprices: React.FC<Props> = ({ products, className, title }) => {
           >
             <img
               className="products-slider__icon"
-              src={getAssetPath('img/VectorBack.svg')}
+              src="./img/VectorBack.svg"
               alt="Previous"
             />
           </button>
@@ -121,7 +99,7 @@ export const Hotprices: React.FC<Props> = ({ products, className, title }) => {
           >
             <img
               className="products-slider__icon"
-              src={getAssetPath('img/VectorNext.svg')}
+              src="./img/VectorNext.svg"
               alt="Next"
             />
           </button>
@@ -131,7 +109,7 @@ export const Hotprices: React.FC<Props> = ({ products, className, title }) => {
       <div className="products-slider__container" ref={containerRef}>
         {finalProducts.map(product => {
           const isFav = isFavourite(product.itemId);
-          const imageUrl = getAssetPath(product.image);
+          const imageUrl = `./${product.image}`;
 
           const cardDetails: ProductDetails = {
             id: product.itemId,
@@ -212,9 +190,7 @@ export const Hotprices: React.FC<Props> = ({ products, className, title }) => {
                 >
                   <img
                     src={
-                      isFav
-                        ? getAssetPath('img/FavouritesFilled.svg')
-                        : getAssetPath('img/love.svg')
+                      isFav ? './img/FavouritesFilled.svg' : './img/love.svg'
                     }
                     alt="Favorites"
                     className="product-card__love-icon"
