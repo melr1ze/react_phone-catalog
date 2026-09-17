@@ -67,9 +67,13 @@ export const TabletsCatalog = () => {
       <div className="phones-catalog">
         <div className="nav-chain">
           <Link to="/" className="nav-chain__icon">
-            <img src="/img/Home.svg" alt="Home" />
+            <img src="./img/Home.svg" alt="Home" />
           </Link>
-          <img src="/img/VectorNext.svg" alt=">" className="nav-chain__arrow" />
+          <img
+            src="./img/VectorNext.svg"
+            alt=">"
+            className="nav-chain__arrow"
+          />
           <span className="nav-chain__text">Tablets</span>
         </div>
 
@@ -139,7 +143,7 @@ export const TabletsCatalog = () => {
                 >
                   <div className="product-card__image-wrapper">
                     <img
-                      src={product.image}
+                      src={`./${product.image}`}
                       alt={product.name}
                       className="product-card__image"
                     />
@@ -195,7 +199,9 @@ export const TabletsCatalog = () => {
                     >
                       <img
                         src={
-                          isFav ? '/img/FavouritesFilled.svg' : '/img/love.svg'
+                          isFav
+                            ? './img/FavouritesFilled.svg'
+                            : './img/love.svg'
                         }
                         alt="Favorites"
                         className="product-card__love-icon"
@@ -219,7 +225,7 @@ export const TabletsCatalog = () => {
               >
                 <img
                   className="products-slider__icon"
-                  src="/img/VectorBack.svg"
+                  src="./img/VectorBack.svg"
                   alt="Previous"
                 />
               </button>
@@ -249,7 +255,7 @@ export const TabletsCatalog = () => {
               >
                 <img
                   className="products-slider__icon"
-                  src="/img/VectorNext.svg"
+                  src="./img/VectorNext.svg"
                   alt="Next"
                 />
               </button>
@@ -257,7 +263,7 @@ export const TabletsCatalog = () => {
           )}
         </div>
       </div>
-      <Footer />;
+      <Footer />
     </>
   );
 };

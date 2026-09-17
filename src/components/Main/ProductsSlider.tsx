@@ -77,27 +77,31 @@ export const ProductsSlider: React.FC<Props> = ({
         <div className="products-slider__buttons">
           <button
             type="button"
-            className={`products-slider__btn ${isAtStart ? 'products-slider__btn--disabled' : ''}`}
+            className={`products-slider__btn ${
+              isAtStart ? 'products-slider__btn--disabled' : ''
+            }`}
             onClick={() => handleScroll('left')}
             disabled={isAtStart}
             aria-label="Previous"
           >
             <img
               className="products-slider__icon"
-              src="img/VectorBack.svg"
+              src="./img/VectorBack.svg"
               alt="Previous"
             />
           </button>
           <button
             type="button"
-            className={`products-slider__btn ${isAtEnd ? 'products-slider__btn--disabled' : ''}`}
+            className={`products-slider__btn ${
+              isAtEnd ? 'products-slider__btn--disabled' : ''
+            }`}
             onClick={() => handleScroll('right')}
             disabled={isAtEnd}
             aria-label="Next"
           >
             <img
               className="products-slider__icon"
-              src="img/VectorNext.svg"
+              src="./img/VectorNext.svg"
               alt="Next"
             />
           </button>
@@ -131,7 +135,7 @@ export const ProductsSlider: React.FC<Props> = ({
             >
               <div className="product-card__image-wrapper">
                 <img
-                  src={product.image}
+                  src={`./${product.image}`}
                   alt={product.name}
                   className="product-card__image"
                 />
@@ -167,7 +171,9 @@ export const ProductsSlider: React.FC<Props> = ({
                 />
                 <button
                   type="button"
-                  className={`product-card__favorite-btn ${isFav ? 'product-card__favorite-btn--active' : ''}`}
+                  className={`product-card__favorite-btn ${
+                    isFav ? 'product-card__favorite-btn--active' : ''
+                  }`}
                   aria-label="Add to favorites"
                   onClick={e => {
                     e.preventDefault();
@@ -176,7 +182,9 @@ export const ProductsSlider: React.FC<Props> = ({
                   }}
                 >
                   <img
-                    src={isFav ? '/img/FavouritesFilled.svg' : '/img/love.svg'}
+                    src={
+                      isFav ? './img/FavouritesFilled.svg' : './img/love.svg'
+                    }
                     alt="Favorites"
                     className="product-card__love-icon"
                   />

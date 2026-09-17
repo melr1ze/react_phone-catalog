@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Hotprices.scss';
 import { Link } from 'react-router-dom';
 import { AddToCartButton } from '../addToCart';
@@ -32,7 +32,6 @@ export const Hotprices: React.FC<Props> = ({ products, className, title }) => {
   const { isFavourite, toggleFavourite } = useFavourites();
 
   const sortedProducts = [...products].sort((a, b) => b.year - a.year);
-
   const finalProducts = sortedProducts.slice(0, 12);
 
   const checkScrollPosition = () => {
@@ -68,6 +67,28 @@ export const Hotprices: React.FC<Props> = ({ products, className, title }) => {
     });
   };
 
+  const getAssetPath = (path: string) => {
+    if (!path) {
+      return '';
+    }
+
+    if (path.startsWith('http://') || path.startsWith('https://')) {
+      return path;
+    }
+
+    const cleanPath = path.replace(/^[./]+/, '');
+    const publicUrl =
+      process.env.PUBLIC_URL ||
+      (typeof import.meta !== 'undefined' && import.meta.env?.BASE_URL) ||
+      '';
+
+    const normalizedPublicUrl = publicUrl.endsWith('/')
+      ? publicUrl.slice(0, -1)
+      : publicUrl;
+
+    return `${normalizedPublicUrl}/${cleanPath}`;
+  };
+
   return (
     <section className={`products-slider ${className || ''}`}>
       <div className="products-slider__top">
@@ -76,27 +97,31 @@ export const Hotprices: React.FC<Props> = ({ products, className, title }) => {
         <div className="products-slider__buttons">
           <button
             type="button"
-            className={`products-slider__btn ${isAtStart ? 'products-slider__btn--disabled' : ''}`}
+            className={`products-slider__btn ${
+              isAtStart ? 'products-slider__btn--disabled' : ''
+            }`}
             onClick={() => handleScroll('left')}
             disabled={isAtStart}
             aria-label="Previous"
           >
             <img
               className="products-slider__icon"
-              src="img/VectorBack.svg"
+              src={getAssetPath('img/VectorBack.svg')}
               alt="Previous"
             />
           </button>
           <button
             type="button"
-            className={`products-slider__btn ${isAtEnd ? 'products-slider__btn--disabled' : ''}`}
+            className={`products-slider__btn ${
+              isAtEnd ? 'products-slider__btn--disabled' : ''
+            }`}
             onClick={() => handleScroll('right')}
             disabled={isAtEnd}
             aria-label="Next"
           >
             <img
               className="products-slider__icon"
-              src="img/VectorNext.svg"
+              src={getAssetPath('img/VectorNext.svg')}
               alt="Next"
             />
           </button>
@@ -106,6 +131,7 @@ export const Hotprices: React.FC<Props> = ({ products, className, title }) => {
       <div className="products-slider__container" ref={containerRef}>
         {finalProducts.map(product => {
           const isFav = isFavourite(product.itemId);
+          const imageUrl = getAssetPath(product.image);
 
           const cardDetails: ProductDetails = {
             id: product.itemId,
@@ -118,7 +144,7 @@ export const Hotprices: React.FC<Props> = ({ products, className, title }) => {
             priceDiscount: product.price,
             colorsAvailable: [],
             color: '',
-            images: [product.image],
+            images: [imageUrl],
             description: [],
           };
 
@@ -130,7 +156,7 @@ export const Hotprices: React.FC<Props> = ({ products, className, title }) => {
             >
               <div className="product-card__image-wrapper">
                 <img
-                  src={product.image}
+                  src={imageUrl}
                   alt={product.name}
                   className="product-card__image"
                 />
@@ -168,13 +194,15 @@ export const Hotprices: React.FC<Props> = ({ products, className, title }) => {
                 <AddToCartButton
                   productSummary={product}
                   productDetails={cardDetails}
-                  selectedImage={product.image}
+                  selectedImage={imageUrl}
                   className="product-card__add-btn"
                   onClick={e => e.preventDefault()}
                 />
                 <button
                   type="button"
-                  className={`product-card__favorite-btn ${isFav ? 'product-card__favorite-btn--active' : ''}`}
+                  className={`product-card__favorite-btn ${
+                    isFav ? 'product-card__favorite-btn--active' : ''
+                  }`}
                   aria-label="Add to favorites"
                   onClick={e => {
                     e.preventDefault();
@@ -183,7 +211,11 @@ export const Hotprices: React.FC<Props> = ({ products, className, title }) => {
                   }}
                 >
                   <img
-                    src={isFav ? '/img/FavouritesFilled.svg' : '/img/love.svg'}
+                    src={
+                      isFav
+                        ? getAssetPath('img/FavouritesFilled.svg')
+                        : getAssetPath('img/love.svg')
+                    }
                     alt="Favorites"
                     className="product-card__love-icon"
                   />

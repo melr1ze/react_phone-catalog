@@ -19,7 +19,7 @@ export const Footer: React.FC<FooterProps> = ({ className }) => {
         <a href="#/" className="footer__logo-link">
           <div className="footer__logo">
             NICE
-            <img src="/img/Finger.png" alt="Finger" className="footer__icon" />
+            <img src="./img/Finger.png" alt="Finger" className="footer__icon" />
             <br />
             GADGETS
           </div>
@@ -59,7 +59,7 @@ export const Footer: React.FC<FooterProps> = ({ className }) => {
             aria-label="Back to top"
           >
             <img
-              src="/img/VectorTop.svg"
+              src="../img/VectorTop.svg"
               alt="Arrow up"
               className="footer__back-icon"
             />
