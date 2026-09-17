@@ -40,7 +40,7 @@ $border-color: rgba(255, 255, 255, 0.1);
     margin-left: 15px;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: 'Mont', sans-serif;
+    font-family: Mont, sans-serif;
   }
 
   &__logo-icon {
@@ -50,7 +50,7 @@ $border-color: rgba(255, 255, 255, 0.1);
 
   &__close-btn {
     background: none;
-    border: none;
+    border: 1px solid #323542;
     padding: 0;
     cursor: pointer;
     display: flex;
@@ -58,7 +58,6 @@ $border-color: rgba(255, 255, 255, 0.1);
     justify-content: center;
     width: 48px;
     height: 48px;
-    border: 1px solid #323542;
     color: #fff;
   }
 
@@ -74,40 +73,40 @@ $border-color: rgba(255, 255, 255, 0.1);
     flex-grow: 1;
   }
 
-    &__link {
-      color: $text-muted;
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      font-family: 'Mont', sans-serif;
-      position: relative;
-      padding-bottom: 6px;
-      transition: color 0.3s ease;
+  &__link {
+    color: $text-muted;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-family: Mont, sans-serif;
+    position: relative;
+    padding-bottom: 6px;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $text-light;
+
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    &:hover {
+      color: $text-light;
 
       &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: $text-light;
-
-        transform: scaleX(0);
-        transform-origin: center;
-        transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-      }
-
-      &:hover {
-        color: $text-light;
-
-        &::after {
-          transform: scaleX(1);
-        }
+        transform: scaleX(1);
       }
     }
+  }
 
   &__footer {
     display: flex;

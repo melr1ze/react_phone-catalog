@@ -1,19 +1,19 @@
 @font-face {
-  font-family: 'Mont';
+  font-family: Mont;
   src: url('/fonts/Mont-Bold.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'SemiBold-Mont';
+  font-family: SemiBold-Mont;
   src: url('/fonts/Mont-SemiBold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Regular-Mont';
+  font-family: Regular-Mont;
   src: url('/fonts/Mont-Regular.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
@@ -27,7 +27,7 @@
 }
 
 .favourites-page {
-  font-family: 'Mont', sans-serif;
+  font-family: Mont, sans-serif;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -101,7 +101,7 @@
 
     &__text {
       font-size: 12px;
-      font-family: 'SemiBold-Mont';
+      font-family: SemiBold-Mont, sans-serif;
       color: #75767f;
       line-height: 16px;
       transform: translateY(1.5px);
@@ -128,14 +128,10 @@
     @media (min-width: 640px) {
       font-size: 48px;
     }
-
-    @media (min-width: 1200px) {
-      font-size: 48px;
-    }
   }
 
   &__par {
-    font-family: 'Regular-Mont';
+    font-family: Regular-Mont, sans-serif;
     display: block;
     color: #89939a;
     font-size: 14px;
@@ -154,7 +150,7 @@
 
   &__count {
     font-size: 14px;
-    color: #75767F;
+    color: #75767f;
   }
 
   &__grid {
@@ -206,11 +202,11 @@
     }
 
     &__title {
-      font-family: 'Regular-Mont';
+      font-family: Regular-Mont, sans-serif;
       font-size: 14px;
       line-height: 21px;
-      color: #ffffff;
-      margin: 0 0 8px 0;
+      color: #fff;
+      margin: 0 0 8px;
       font-weight: 600;
     }
 
@@ -222,14 +218,14 @@
     }
 
     &__price {
-      font-family: 'Mont';
+      font-family: Mont, sans-serif;
       font-size: 22px;
-      color: #ffffff;
+      color: #fff;
       margin: 0;
     }
 
     &__full-price {
-      font-family: 'Regular-Mont';
+      font-family: Regular-Mont, sans-serif;
       font-size: 14px;
       color: #8993a4;
       text-decoration: line-through;
@@ -255,13 +251,13 @@
       line-height: 15px;
 
       span:first-child {
-        font-family: 'SemiBold-Mont';
+        font-family: SemiBold-Mont, sans-serif;
         color: #8993a4;
       }
 
       span:last-child {
-        font-family: 'SemiBold-Mont';
-        color: #ffffff;
+        font-family: SemiBold-Mont, sans-serif;
+        color: #fff;
       }
     }
 
@@ -275,9 +271,9 @@
       flex: 1;
       height: 40px;
       background-color: #905bff;
-      color: #ffffff;
+      color: #fff;
       border: none;
-      font-family: 'SemiBold-Mont';
+      font-family: SemiBold-Mont, sans-serif;
       font-size: 14px;
       cursor: pointer;
       transition: background-color 0.2s;

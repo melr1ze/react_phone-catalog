@@ -1,19 +1,19 @@
 @font-face {
-  font-family: 'Mont';
+  font-family: Mont;
   src: url('/fonts/Mont-Bold.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'SemiBold-Mont';
+  font-family: SemiBold-Mont;
   src: url('/fonts/Mont-SemiBold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Regular-Mont';
+  font-family: Regular-Mont;
   src: url('/fonts/Mont-Regular.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
@@ -43,13 +43,9 @@
     line-height: 140%;
     color: #f1f2f9;
     margin: 0;
-    font-family: 'Mont';
+    font-family: Mont, sans-serif;
 
     @media (min-width: 640px) {
-      font-size: 32px;
-    }
-
-    @media (min-width: 1200px) {
       font-size: 32px;
     }
   }
@@ -136,9 +132,9 @@
   &__title {
     font-size: 14px;
     color: #f1f2f9;
-    margin: 0 0 8px 0;
+    margin: 0 0 8px;
     line-height: 21px;
-    font-family: 'Regular-Mont';
+    font-family: Regular-Mont, sans-serif;
   }
 
   &__price {
@@ -158,7 +154,7 @@
       color: #89939a;
       text-decoration: line-through;
       margin: 0;
-      font-family: 'Regular-Mont';
+      font-family: Regular-Mont, sans-serif;
     }
   }
 
@@ -173,7 +169,7 @@
     flex-direction: column;
     gap: 8px;
     margin-bottom: 16px;
-    font-family: 'SemiBold-Mont';
+    font-family: SemiBold-Mont, sans-serif;
   }
 
   &__spec {
@@ -201,11 +197,10 @@
     background-color: #905bff;
     border: none;
     color: #fff;
-    font-family: 'Mont', sans-serif;
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
-    font-family: 'SemiBold-Mont';
+    font-family: SemiBold-Mont, sans-serif;
   }
 
   &__favorite-btn {

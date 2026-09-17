@@ -13,39 +13,20 @@ body {
   overflow-x: hidden;
 }
 
-#root {
-  width: 100%;
-  overflow-x: hidden;
-}
-
 img {
   max-width: 100%;
   height: auto;
 }
 
 @font-face {
-  font-family: 'Mont';
+  font-family: Mont;
   src: url('/fonts/Mont-Bold.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Mont';
-  src: url('/fonts/Mont-SemiBold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Mont';
-  src: url('/fonts/Mont-Regular.otf') format('opentype');
-  font-weight: 600;
-  font-style: normal;
-}
-
 .product-page {
-  font-family: 'Mont', sans-serif;
+  font-family: Mont, sans-serif;
   box-sizing: border-box;
   width: 100%;
   padding: 40px 16px;
@@ -69,7 +50,7 @@ img {
     color: #fff;
     text-align: center;
     margin-top: 400px;
-    font-family: 'Mont', sans-serif;
+    font-family: Mont, sans-serif;
   }
 
   &__nav-chain,
@@ -194,9 +175,8 @@ img {
     @media (min-width: 640px) {
       grid-column: 1;
       grid-row: 1;
-      flex-direction: column;
+      flex-flow: column nowrap;
       justify-content: flex-start;
-      flex-wrap: nowrap;
     }
 
     @media (min-width: 1200px) {
@@ -221,12 +201,12 @@ img {
       height: 80px;
     }
 
-    &:hover {
-      border-color: #8993a4;
-    }
-
     &--active {
       border-color: #fff;
+    }
+
+    &:hover {
+      border-color: #8993a4;
     }
   }
 
@@ -285,11 +265,11 @@ img {
     box-sizing: border-box;
 
     &--active {
-      border-color: #F1F2F9;
+      border-color: #f1f2f9;
     }
 
     &:hover {
-      border-color: #75767F;
+      border-color: #75767f;
     }
   }
 
@@ -367,7 +347,7 @@ img {
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
-    font-family: 'Mont', sans-serif;
+    font-family: Mont, sans-serif;
     transition: background 0.3s ease;
 
     &:hover {
@@ -422,10 +402,6 @@ img {
     gap: 32px;
 
     @media (min-width: 640px) {
-      grid-column: -1 / 1;
-    }
-
-    @media (min-width: 1200px) {
       grid-column: 1 / -1;
     }
 
@@ -511,7 +487,6 @@ img {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-
     margin-top: 56px;
   }
 }

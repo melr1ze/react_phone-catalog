@@ -13,7 +13,7 @@ export const Main = () => {
   return (
     <>
       <main className="main">
-        <h1 className="main__title">Welcome to Nice Gadgets store!</h1>
+        <h1 className="main__title">Product Catalog</h1>
 
         <div className="main__content">
           <Banners />
@@ -22,7 +22,7 @@ export const Main = () => {
           <Hotprices products={brandNewProductsSort} />
         </div>
       </main>
-      <Footer />;
+      <Footer />
     </>
   );
 };

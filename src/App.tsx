@@ -1,5 +1,5 @@
 import './App.scss';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header/Header';
 import { Main } from './components/Main/Main';
 import { PhonesCatalog } from './components/PhonesCatalog';
@@ -22,6 +22,7 @@ export const App = () => {
             <ScrollToTop />
             <Routes>
               <Route path="/" element={<Main />} />
+              <Route path="/home" element={<Main />} />{' '}
               <Route path="/phones" element={<PhonesCatalog />} />
               <Route
                 path="/phones/:productId"
@@ -33,14 +34,12 @@ export const App = () => {
                 element={<ProductDetailsPage />}
               />
               <Route path="/accessories" element={<AccessoriesCatalog />} />
-              <Route path="/cart" element={<Cart />} />
-
-              <Route path="/favorites" element={<FavouritesPage />} />
-
               <Route
                 path="/accessories/:productId"
                 element={<ProductDetailsPage />}
               />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/favorites" element={<FavouritesPage />} />
               <Route path="*" element={<h1>Page not found</h1>} />
             </Routes>
           </div>

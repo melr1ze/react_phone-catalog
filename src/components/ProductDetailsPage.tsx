@@ -1,4 +1,3 @@
-// eslint-disable-next-line max-len
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './ProductDetailsPage.scss';
@@ -276,11 +275,19 @@ export const ProductDetailsPage = () => {
           <div className="product-page__divider" />
 
           <div className="product-page__price-block">
-            <span className="product-page__price product-page__price--discount">
+            <span
+              className={
+                'product-page__price ' + 'product-page__price--discount'
+              }
+            >
               ${productSummary.price}
             </span>
             {productSummary.fullPrice && (
-              <span className="product-page__price product-page__price--regular">
+              <span
+                className={
+                  'product-page__price ' + 'product-page__price--regular'
+                }
+              >
                 ${productSummary.fullPrice}
               </span>
             )}

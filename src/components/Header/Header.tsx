@@ -24,7 +24,7 @@ export const Header = () => {
       </Link>
 
       <nav className="header__nav">
-        <NavLink to="/" className="header__nav-link">
+        <NavLink to="/" className="header__nav-link" end>
           Home
         </NavLink>
         <NavLink to="/phones" className="header__nav-link">

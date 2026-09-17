@@ -8,20 +8,20 @@
 
 html,
 body {
-  background-color: #0F1121;
+  background-color: #0f1121;
   margin: 0;
   padding: 0;
 }
 
 @font-face {
-  font-family: 'Mont';
+  font-family: Mont;
   src: url('/fonts/Mont-Bold.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Mont';
+  font-family: Mont;
   src: url('/fonts/Mont-Bold.otf') format('opentype');
   font-weight: 8700;
   font-style: normal;
@@ -54,7 +54,7 @@ body {
     margin-right: 0;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: 'Mont', sans-serif;
+    font-family: Mont, sans-serif;
   }
 
   &__icon {
@@ -110,7 +110,7 @@ body {
     align-items: center;
     height: 100%;
     padding: 0 8px;
-    font-family: 'Mont', sans-serif;
+    font-family: Mont, sans-serif;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -183,7 +183,7 @@ body {
     top: 10px;
     right: 18px;
     background-color: #eb5757;
-    color: #ffffff;
+    color: #fff;
     font-size: 9px;
     font-weight: 700;
     line-height: 1;

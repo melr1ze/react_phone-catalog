@@ -1,5 +1,5 @@
 .cart-page {
-  font-family: 'Mont', sans-serif;
+  font-family: Mont, sans-serif;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -10,17 +10,11 @@
   flex-direction: column;
 
   @media (min-width: 640px) {
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 75px;
-    padding-bottom: 64px;
+    padding: 75px 24px 64px;
   }
 
   @media (min-width: 1200px) {
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 95px;
-    padding-bottom: 86px;
+    padding: 95px 32px 86px;
   }
 
   &__back {
@@ -227,4 +221,3 @@
     }
   }
 }
-

@@ -1,19 +1,19 @@
 @font-face {
-  font-family: 'Mont';
+  font-family: Mont;
   src: url('/fonts/Mont-Bold.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'SemiBold-Mont';
+  font-family: SemiBold-Mont;
   src: url('/fonts/Mont-SemiBold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Regular-Mont';
+  font-family: Regular-Mont;
   src: url('/fonts/Mont-Regular.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
@@ -23,13 +23,13 @@
   width: 100%;
   padding: 0 16px;
 
-    @media (min-width: 640px) {
-      padding: 0 24px;
-    }
+  @media (min-width: 640px) {
+    padding: 0 24px;
+  }
 
-    @media (min-width: 1200px) {
-      padding: 0 32px;
-    }
+  @media (min-width: 1200px) {
+    padding: 0 32px;
+  }
 
   &__top {
     display: flex;
@@ -44,13 +44,9 @@
     line-height: 140%;
     color: #f1f2f9;
     margin: 0;
-    font-family: 'Mont';
+    font-family: Mont, sans-serif;
 
     @media (min-width: 640px) {
-      font-size: 32px;
-    }
-
-    @media (min-width: 1200px) {
       font-size: 32px;
     }
   }
@@ -60,41 +56,40 @@
     gap: 16px;
   }
 
-    &__btn {
-      width: 32px;
-      height: 32px;
-      background-color: #323542;
-      border: 1px solid transparent;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-sizing: border-box;
-      transition: all 0.3s ease;
+  &__btn {
+    width: 32px;
+    height: 32px;
+    background-color: #323542;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
 
-      &:hover:not(:disabled) {
-        background-color: #4a4d5d;
-      }
+    &:hover:not(:disabled) {
+      background-color: #4a4d5d;
+    }
 
-      &--disabled,
-      &:disabled {
-        background-color: transparent;
-        border-color: #323542;
-        cursor: default;
+    &--disabled,
+    &:disabled {
+      background-color: transparent;
+      border-color: #323542;
+      cursor: default;
 
-        .products-slider__icon {
-          opacity: 0.3;
-          filter: none;
-        }
+      .products-slider__icon {
+        opacity: 0.3;
+        filter: none;
       }
     }
+  }
 
   &__container {
     display: flex;
     gap: 16px;
     overflow-x: auto;
     scroll-behavior: smooth;
-
     scrollbar-width: none;
 
     @media (min-width: 1200px) {
@@ -120,7 +115,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  font-family: 'Mont';
+  font-family: Mont, sans-serif;
 
   &__image-wrapper {
     width: 100%;
@@ -141,16 +136,16 @@
     font-size: 14px;
     font-weight: 600;
     color: #f1f2f9;
-    margin: 0 0 8px 0;
+    margin: 0 0 8px;
     line-height: 21px;
-    font-family: 'Regular-Mont';
+    font-family: Regular-Mont, sans-serif;
   }
 
   &__price {
     font-size: 22px;
-    font-family: 'Mont';
+    font-family: Mont, sans-serif;
     color: #f1f2f9;
-    margin: 0 0 16px 0;
+    margin: 0 0 16px;
   }
 
   &__divider {
@@ -164,7 +159,7 @@
     flex-direction: column;
     gap: 8px;
     margin-bottom: 16px;
-    font-family: 'SemiBold-Mont';
+    font-family: SemiBold-Mont, sans-serif;
   }
 
   &__spec {
@@ -192,12 +187,12 @@
     border: none;
     color: #fff;
     cursor: pointer;
-    font-family: 'SemiBold-Mont';
+    font-family: SemiBold-Mont, sans-serif;
     font-weight: 700;
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #A378FF;
+      background-color: #a378ff;
     }
   }
 
@@ -208,14 +203,14 @@
     border: none;
     color: #fff;
     cursor: pointer;
-    font-family: 'Regular-Mont';
+    font-family: Regular-Mont, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
 
     &:hover {
-        background-color: #4A4D58;
-      }
+      background-color: #4a4d58;
+    }
   }
 }

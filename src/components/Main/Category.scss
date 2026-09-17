@@ -1,19 +1,19 @@
 @font-face {
-  font-family: 'Mont';
+  font-family: Mont;
   src: url('/fonts/Mont-Bold.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'SemiBold-Mont';
+  font-family: SemiBold-Mont;
   src: url('/fonts/Mont-SemiBold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Regular-Mont';
+  font-family: Regular-Mont;
   src: url('/fonts/Mont-Regular.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
@@ -33,7 +33,7 @@
   }
 
   &__title {
-    font-family: 'Mont', sans-serif;
+    font-family: Mont, sans-serif;
     font-size: 22px;
     font-weight: 800;
     line-height: 140%;
@@ -49,16 +49,15 @@
   &__list {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 32px;
+    gap: 32px 0;
 
     @media (min-width: 640px) {
       grid-template-columns: repeat(3, 1fr);
-      column-gap: 16px;
-      row-gap: 0;
+      gap: 0 16px;
     }
 
     @media (min-width: 1200px) {
-      column-gap: 24px;
+      gap: 0 24px;
     }
   }
 
@@ -66,18 +65,6 @@
     display: grid;
     grid-template-rows: auto auto auto;
     width: 100%;
-  }
-
-  &__picture-wrapper {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    background-color: #6d6474;
-    cursor: pointer;
-
-    &:hover .categories__photo {
-        transform: scale(1.04);
-      }
   }
 
   &__photo {
@@ -88,17 +75,29 @@
     transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
+  &__picture-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: #6d6474;
+    cursor: pointer;
+
+    &:hover .categories__photo {
+      transform: scale(1.04);
+    }
+  }
+
   &__title2 {
     margin-top: 24px;
     font-size: 20px;
     font-weight: 700;
     line-height: 140%;
     color: #f1f2f9;
-    font-family: 'SemiBold-Mont', sans-serif;
+    font-family: SemiBold-Mont, sans-serif;
   }
 
   &__models {
-    font-family: 'Regular-Mont', sans-serif;
+    font-family: Regular-Mont, sans-serif;
     font-size: 14px;
     line-height: 140%;
     margin-top: 4px;
