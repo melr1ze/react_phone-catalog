@@ -20,10 +20,10 @@ export const FavouritesPage: React.FC = () => {
         <div className="favourites-page__container">
           <div className="nav-chain">
             <Link to="/" className="nav-chain__icon">
-              <img src="/img/Home.svg" alt="Home" />
+              <img src="./img/Home.svg" alt="Home" />
             </Link>
             <img
-              src="/img/VectorNext.svg"
+              src="./img/VectorNext.svg"
               alt=">"
               className="nav-chain__arrow"
             />
@@ -70,7 +70,7 @@ export const FavouritesPage: React.FC = () => {
                   >
                     <div className="product-card__image-wrapper">
                       <img
-                        src={`/${product.image}`}
+                        src={`./${product.image}`}
                         alt={product.name}
                         className="product-card__image"
                       />
@@ -127,8 +127,8 @@ export const FavouritesPage: React.FC = () => {
                         <img
                           src={
                             isFav
-                              ? '/img/FavouritesFilled.svg'
-                              : '/img/love.svg'
+                              ? './img/FavouritesFilled.svg'
+                              : './img/love.svg'
                           }
                           alt="Favorites"
                           className="product-card__love-icon"
@@ -142,7 +142,7 @@ export const FavouritesPage: React.FC = () => {
           )}
         </div>
       </div>
-      <Footer className="footer" />;
+      <Footer className="footer" />
     </>
   );
 };

@@ -13,7 +13,7 @@ export const Cart = () => {
       <div className="cart-page">
         <div className="cart-page__back" onClick={() => navigate(-1)}>
           <img
-            src="/img/VectorBack.svg"
+            src="./img/VectorBack.svg"
             alt="Back"
             className="cart-page__back-icon"
           />
@@ -38,7 +38,7 @@ export const Cart = () => {
                   </button>
 
                   <img
-                    src={`/${item.image}`}
+                    src={`./${item.image}`}
                     alt={item.name}
                     className="cart-item__image"
                   />

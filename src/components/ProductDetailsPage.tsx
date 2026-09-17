@@ -143,14 +143,14 @@ export const ProductDetailsPage = () => {
             className="product-page__nav-link product-page__nav-link--icon"
           >
             <img
-              src="/img/Home.svg"
+              src="./img/Home.svg"
               alt="Home"
               className="product-page__nav-icon"
             />
           </Link>
 
           <img
-            src="/img/VectorNext.svg"
+            src="./img/VectorNext.svg"
             alt=">"
             className="product-page__nav-arrow"
           />
@@ -165,7 +165,7 @@ export const ProductDetailsPage = () => {
           </Link>
 
           <img
-            src="/img/VectorNext.svg"
+            src="./img/VectorNext.svg"
             alt=">"
             className="product-page__nav-arrow"
           />
@@ -175,7 +175,7 @@ export const ProductDetailsPage = () => {
 
         <div className="product-page__back-btn" onClick={handleBack}>
           <img
-            src="/img/VectorBack.svg"
+            src="./img/VectorBack.svg"
             alt="Back"
             className="product-page__back-icon"
           />
@@ -188,7 +188,7 @@ export const ProductDetailsPage = () => {
           <div className="product-page__main-image-container">
             {selectedImage && (
               <img
-                src={`/${selectedImage}`}
+                src={`./${selectedImage}`}
                 alt={productSummary.name}
                 className="product-page__main-image"
               />
@@ -208,7 +208,7 @@ export const ProductDetailsPage = () => {
                 onClick={() => setSelectedImage(imgUrl)}
               >
                 <img
-                  src={`/${imgUrl}`}
+                  src={`./${imgUrl}`}
                   alt={`${productSummary.name} view ${index + 1}`}
                   className="product-page__thumbnail-img"
                 />
@@ -308,7 +308,7 @@ export const ProductDetailsPage = () => {
               onClick={() => toggleFavourite(productSummary.itemId)}
             >
               <img
-                src={isFav ? '/img/FavouritesFilled.svg' : '/img/love.svg'}
+                src={isFav ? './img/FavouritesFilled.svg' : './img/love.svg'}
                 alt="Favorites"
                 className="product-card__love-icon"
               />

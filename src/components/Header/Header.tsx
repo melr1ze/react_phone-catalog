@@ -18,7 +18,7 @@ export const Header = () => {
     <header className="header">
       <Link to="/" className="header__logo">
         NICE
-        <img src="/img/Finger.png" alt="Finger" className="header__icon" />
+        <img src="./img/Finger.png" alt="Finger" className="header__icon" />
         <br />
         GADGETS
       </Link>
@@ -40,10 +40,9 @@ export const Header = () => {
 
       <div className="header__actions">
         <NavLink to="/favorites" className={getActionBtnClass}>
-          {/* 3. Оборачиваем в wrapper и добавляем бейдж */}
           <div className="header__icon-wrapper">
             <img
-              src="/img/love.svg"
+              src="./img/love.svg"
               alt="Favorites"
               className="header__action-icon"
             />
@@ -56,7 +55,7 @@ export const Header = () => {
         <NavLink to="/cart" className={getActionBtnClass}>
           <div className="header__icon-wrapper">
             <img
-              src="/img/Shopping_bag.svg"
+              src="./img/Shopping_bag.svg"
               alt="Cart"
               className="header__action-icon"
             />
@@ -72,7 +71,7 @@ export const Header = () => {
         className="header__aside-btn"
         onClick={() => setIsMenuOpen(true)}
       >
-        <img src="/img/Union.svg" alt="Menu" className="header__aside-icon" />
+        <img src="./img/Union.svg" alt="Menu" className="header__aside-icon" />
       </button>
 
       <AsideMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />

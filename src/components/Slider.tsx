@@ -79,7 +79,7 @@ export const Slider: React.FC<Props> = ({ products, className, title }) => {
           >
             <img
               className="products-slider__icon"
-              src="/img/VectorBack.svg"
+              src="./img/VectorBack.svg"
               alt="Previous"
             />
           </button>
@@ -92,7 +92,7 @@ export const Slider: React.FC<Props> = ({ products, className, title }) => {
           >
             <img
               className="products-slider__icon"
-              src="/img/VectorNext.svg"
+              src="./img/VectorNext.svg"
               alt="Next"
             />
           </button>
@@ -126,7 +126,7 @@ export const Slider: React.FC<Props> = ({ products, className, title }) => {
             >
               <div className="product-card__image-wrapper">
                 <img
-                  src={`/${product.image}`}
+                  src={`./${product.image}`}
                   alt={product.name}
                   className="product-card__image"
                 />
@@ -179,7 +179,9 @@ export const Slider: React.FC<Props> = ({ products, className, title }) => {
                   }}
                 >
                   <img
-                    src={isFav ? '/img/FavouritesFilled.svg' : '/img/love.svg'}
+                    src={
+                      isFav ? './img/FavouritesFilled.svg' : './img/love.svg'
+                    }
                     alt="Favorites"
                     className="product-card__love-icon"
                   />
