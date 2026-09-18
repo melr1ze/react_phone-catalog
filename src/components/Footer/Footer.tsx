@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.scss';
+import { getAssetPath } from '../getAssetPath';
 
 interface FooterProps {
   className?: string;
@@ -59,7 +60,7 @@ export const Footer: React.FC<FooterProps> = ({ className }) => {
             aria-label="Back to top"
           >
             <img
-              src="../img/VectorTop.svg"
+              src={getAssetPath('img/VectorTop.svg')}
               alt="Arrow up"
               className="footer__back-icon"
             />

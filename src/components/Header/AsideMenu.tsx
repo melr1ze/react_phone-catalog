@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import './AsideMenu.scss';
+import { getAssetPath } from '../getAssetPath';
 
 interface AsideMenuProps {
   isOpen: boolean;
@@ -17,7 +18,7 @@ export const AsideMenu: React.FC<AsideMenuProps> = ({ isOpen, onClose }) => {
         <Link to="/" className="aside-menu__logo" onClick={onClose}>
           NICE
           <img
-            src="/img/Finger.png"
+            src={getAssetPath('img/Finger.png')}
             alt="Finger"
             className="aside-menu__logo-icon"
           />
@@ -58,7 +59,7 @@ export const AsideMenu: React.FC<AsideMenuProps> = ({ isOpen, onClose }) => {
           onClick={onClose}
         >
           <img
-            src="/img/love.svg"
+            src={getAssetPath('img/love.svg')}
             alt="Favorites"
             className="aside-menu__footer-icon"
           />
@@ -66,7 +67,7 @@ export const AsideMenu: React.FC<AsideMenuProps> = ({ isOpen, onClose }) => {
 
         <NavLink to="/cart" className={getFooterBtnClass} onClick={onClose}>
           <img
-            src="/img/Shopping_bag.svg"
+            src={getAssetPath('img/Shopping_bag.svg')}
             alt="Cart"
             className="aside-menu__footer-icon"
           />
